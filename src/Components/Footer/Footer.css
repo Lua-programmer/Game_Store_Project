@@ -1,0 +1,17 @@
+.footer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    background-color: #5AB947;
+    padding: 1rem 0;
+    color: #fafafa;
+    font-size: 1em;
+}
+  
+.r-sociais a {
+    font-size: 1.5em;
+    color: #fafafa;
+    text-decoration: none;
+    margin: 10px
+}
