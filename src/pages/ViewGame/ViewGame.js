@@ -1,4 +1,5 @@
 import React from 'react';
+import './ViewGame.css';
 import { useLocation } from 'react-router-dom';
 import { useState, useEffect } from 'react';
 import axios from 'axios';
@@ -28,7 +29,7 @@ function ViewGame() {
 
 
     return (
-        <div className="card mb-3">
+        <div className="card mb-3 card-view">
             <div className="row g-0">
                 <div className="col-md-4">
                 <img src={game.image} alt={game.name} className="img-fluid rounded-start"></img>

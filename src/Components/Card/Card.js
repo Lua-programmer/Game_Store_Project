@@ -8,7 +8,7 @@ function Card(props) {
     const navigate = useNavigate();
 
     const goToGamePage = () => {
-      navigate("/game", { state: props.id });
+      navigate("/viewgame", { state: props.id });
     };
 
     const wishGame = () => {
