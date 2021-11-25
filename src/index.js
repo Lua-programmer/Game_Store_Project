@@ -10,7 +10,7 @@ import ViewGame from './pages/ViewGame/ViewGame';
 import List from './pages/List/List';
 import Login from './pages/Login/Login';
 import Register from './pages/Register/Register';
-import Perfil from
+import Perfil from './pages/Perfil/Perfil'
 
 
 axios.defaults.baseURL = 'https://nintendo-shop.herokuapp.com';

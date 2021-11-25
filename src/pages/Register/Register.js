@@ -27,7 +27,7 @@ function Register() {
   return (
     <div className="login-container">
       <h2 className="login-title">Crie sua Conta Xbox</h2>
-      <div className="mb-3 form" onSubmit={handleSubmit}>
+      <form className="mb-3 form" onSubmit={handleSubmit}>
 
         <label for="formGroupExampleInput" className="form-label">
           Nome
@@ -94,7 +94,7 @@ function Register() {
         </div>
 
 
-      </div>
+      </form>
 
      
     </div>
