@@ -7,7 +7,9 @@ import Header from '../src/Components/Header/Header';
 import Home from './pages/Home/Home';
 import Footer from './Components/Footer/Footer';
 import ViewGame from './pages/ViewGame/ViewGame';
-import List from './pages/List/List'
+import List from './pages/List/List';
+import Login from './pages/Login/Login';
+import Register from './pages/Register/Register'
 
 
 axios.defaults.baseURL = 'https://nintendo-shop.herokuapp.com';
@@ -19,6 +21,8 @@ ReactDOM.render(
     <React.StrictMode>
       <Routes>
         <Route path="/" element={<Home />} />
+        <Route path="login" element={<Login />} />
+        <Route path="/register" element={< Register/>} />
         <Route path="/viewgame" element={<ViewGame />} />
         <Route path="/list" element={<List />} />
       </Routes>

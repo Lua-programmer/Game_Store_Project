@@ -1,18 +1,70 @@
-import React from 'react'
+import React from 'react';
+import './Login.css'
+import { useState } from 'react';
+import axios from 'axios';
 
 function Login() {
+
+    const [email, setEmail] = useState('');
+    const [password, setPassword] = useState('');
+  
+    const handleSubmit = event => {
+      event.preventDefault();
+  
+      const login = {
+        email: email,
+        password: password
+      }
+  
+      axios.post('/auth/login', login)
+      .then(response => {
+        const token = response.data.token;
+        localStorage.setItem('token', token)
+      })
+    }
+
     return (
-        <div>
-            <div class="mb-3">
-                <label for="formGroupExampleInput" class="form-label">Example label</label>
-                <input type="text" class="form-control" id="formGroupExampleInput" placeholder="Example input placeholder">
-                </div>
-                <div class="mb-3">
-                <label for="formGroupExampleInput2" class="form-label">Another label</label>
-                <input type="text" class="form-control" id="formGroupExampleInput2" placeholder="Another input placeholder">
-            </div>
+      <div className="login-container">
+        <h2 className="login-title">Acesse sua Conta Xbox</h2>
+        <div className="mb-3 form" onSubmit={handleSubmit}>
+          <label for="formGroupExampleInput" className="form-label">
+            E-mail
+          </label>
+          <input
+            type="email"
+            className="form-control"
+            id="formGroupExampleInput"
+            placeholder="xxxxxxx@xxx.com"
+            onChange={event => setEmail(event.target.value)}
+          ></input>
+
+          <label for="formGroupExampleInput2" className="form-label">
+            Senha
+          </label>
+          <input
+            type="password"
+            className="form-control"
+            id="formGroupExampleInput2"
+            placeholder="********"
+            onChange={event => setPassword(event.target.value)}
+          ></input>
+
+          <div className="login-ok">
+            <a href="!#">
+              <span>Esqueceu sua senha?</span>
+            </a>
+          </div>
+
+          <input className="fazer-login" type="submit" value="Fazer login" />
+
         </div>
-    )
+
+        <div className='login-create'>
+          <span>Ainda não possui uma conta?</span>
+          <a className='btn-create' href='/register'>Criar uma conta Xbox</a>
+        </div>
+      </div>
+    );
 }
 
 export default Login
