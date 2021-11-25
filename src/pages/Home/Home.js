@@ -26,7 +26,6 @@ function Home() {
   return (
     <div className='home'>
       <Carrossel
-       id='cd310662-5d46-4852-aace-2194ed21ada5'
        classificationNumber='L'
        classificationText='Livre para qualquer idade'
       />
