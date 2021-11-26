@@ -21,7 +21,9 @@ function Register() {
       passwordConfirmation: passwordConfirmation,
     };
 
-    axios.post("user/register", user).then((response) => console.log(response));
+    axios.post("user/register", user)
+    .then((response) => console.log(response))
+    .then(window.alert('Perfil Criado com Sucesso!'))
   };
 
   return (

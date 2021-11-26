@@ -1,5 +1,8 @@
+button:hover {
+    background-color: red;
+}
 
-/* .container .row{
-    display: flex;
+.card-home {
+    display:flex;
     flex-wrap: wrap;
-} */
+}

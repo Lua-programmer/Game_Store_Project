@@ -1,3 +1,9 @@
 .home {
     overflow: hidden;
 }
+
+.card-home {
+    display: flex;
+    flex-wrap: wrap;
+
+}

@@ -29,6 +29,7 @@ function Home() {
        classificationNumber='L'
        classificationText='Livre para qualquer idade'
       />
+      <div className="card-home">
       {
         games.map(game => (
           <Card 
@@ -40,6 +41,8 @@ function Home() {
           />
         ))
       }
+      </div>
+      
     </div>
   );
 }

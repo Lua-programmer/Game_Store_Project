@@ -1,5 +1,6 @@
 import React from 'react';
 import Card from '../../Components/Card/Card';
+import "./List.css";
 import { useState, useEffect } from 'react';
 import axios from 'axios';
 
@@ -29,19 +30,19 @@ function List() {
 
 
     return (
-        <div>
-            {
-                wishList.map(game => (
-                    <Card 
-                      id={game.id}
-                      image={game.image}
-                      title={game.name}
-                      preco={game.price}
-                      key={game.id}
-                    />
-                ))
-            }
-        </div>
+      <div className="card-home">
+      {
+        wishList.map(game => (
+          <Card 
+            id={game.id}
+            image={game.image}
+            title={game.name}
+            preco={game.price}
+            key={game.id}
+          />
+        ))
+      }
+      </div>
     )
 }
 

@@ -21,12 +21,13 @@ function Login() {
         const token = response.data.token;
         localStorage.setItem('token', token)
       })
+      .then(window.alert('Bem-vindo'))
     }
 
     return (
       <div className="login-container">
         <h2 className="login-title">Acesse sua Conta Xbox</h2>
-        <div className="mb-3 form" onSubmit={handleSubmit}>
+        <form className="mb-3 form" onSubmit={handleSubmit}>
           <label for="formGroupExampleInput" className="form-label">
             E-mail
           </label>
@@ -57,7 +58,7 @@ function Login() {
 
           <input className="fazer-login" type="submit" value="Fazer login" />
 
-        </div>
+        </form>
 
         <div className='login-create'>
           <span>Ainda não possui uma conta?</span>

@@ -24,7 +24,7 @@ function Header() {
               </li>
 
               <li className="nav-item">
-                <a className="nav-link txt" href="/wishList">
+                <a className="nav-link txt" href="/List">
                 <BiBookmarkHeart />
                 <span>Lista de Desejos</span>
                 </a>
